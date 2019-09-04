@@ -13,7 +13,8 @@ yarn：yarn add @ark-plan/ark-cli -g
 
 # 初始化项目
 
-ark create projectName
+* ark create projectName
+* yarn/npm start
 
 
 
