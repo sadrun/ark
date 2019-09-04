@@ -9,7 +9,7 @@
 
 npm：npm install @ark-plan/ark-cli -g
 
-yarn：yarn add @ark-plan/ark-cli -g
+yarn：yarn global add @ark-plan/ark-cli
 
 # 初始化项目
 
