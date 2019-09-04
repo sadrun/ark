@@ -2,7 +2,6 @@
   "name": "@ark-plan/ark-cli",
   "version": "0.0.1",
   "description": "rapid react project generation tool",
-  "main": "index.js",
   "bin": {
     "ark": "./bin/index.js"
   },

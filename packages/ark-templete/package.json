@@ -1,8 +1,7 @@
 {
   "name": "@ark-plan/ark-templete",
   "version": "0.0.1",
-  "description": "react templete",
-  "main": "index.js",
+  "description": "emplete",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

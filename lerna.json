@@ -2,6 +2,7 @@
   "packages": [
     "packages/*"
   ],
+  "lerna": "^3.16.1",
   "version": "independent",
   "npmClient": "yarn",
   "useWorkspaces": true
