@@ -2,15 +2,21 @@ const chalk = require('chalk');
 const program = require('commander');
 const inquirer = require('inquirer');
 const fs = require('fs-extra');
+const ora = require('ora');
+
+const spinner = ora();
 
 const packageJson = require('../package.json');
+
+const { log, error } = require('../utils/log');
 
 const {
     isDangerousToCreateProject,
     initTemplate,
+    installDependencies
 } = require('../utils');
 
-const spinner = ora();
+
 
 async function createApp(projectName) {
     if (isDangerousToCreateProject(projectName)){
@@ -48,7 +54,11 @@ async function createApp(projectName) {
         template:'react', //保留项目类型，留作以后扩展，例如vue等
     };
 
+    // 初始化模板
     await initTemplate(config);
+    
+    // 安装依赖
+    await installDependencies(config);
 }
 
 
