@@ -80,7 +80,7 @@ program
   .action((cmd) => {
     log();
     log(`  ${chalk.red(`Unknown command ${chalk.yellow(cmd)}.`)}`);
-    log(`  Please run ${chalk.cyan('atom -h')} for more information of usage.`);
+    log(`  Please run ${chalk.cyan('ark -h')} for more information of usage.`);
     log();
   });
 
