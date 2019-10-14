@@ -125,6 +125,54 @@ const config = {
           ]
         },
         {
+          test: /\.h5\.less$/,
+          exclude: /node_modules/,
+          use: [
+            //devMode ? 'style-loader' :  MiniCssExtractPlugin.loader, //如果需要css热更新，需要用style-loader
+            // 经验证，mini-css-extract-plugin也可以开启热更新
+            {
+              loader: MiniCssExtractPlugin.loader,
+              options: {
+                hmr: devMode, //仅在dev模式下开启
+              }
+            },
+            {
+              loader: "css-loader",
+              options: {
+                modules: false
+              }
+            },
+            {
+              loader: "postcss-loader",
+              options: {
+                plugins: [
+                  require("autoprefixer")(),
+                  require('postcss-px-to-viewport')({
+                      propList: ['*'],
+                      unitToConvert: 'px',
+                      viewportWidth: 375, // 视窗的宽度，对应的是我们设计稿的宽度，一般是750 
+                      viewportHeight: 667, // 视窗的高度，根据750设备的宽度来指定，一般指定667，也可以不配置 
+                      unitPrecision: 5, // 指定`px`转换为视窗单位值的小数位数（很多时候无法整除） 
+                      viewportUnit: 'vw', // 指定需要转换成的视窗单位，建议使用vw 
+                      fontViewportUnit: 'vw',
+                      selectorBlackList: ['.ignore', '.hairlines'], // 指定不转换为视窗单位的类，可以自定义，可以无限添加,建议定义一至两个通用的类名 
+                      minPixelValue: 1, // 小于或等于`1px`不转换为视窗单位，你也可以设置为你想要的值 
+                      mediaQuery: false // 允许在媒体查询中转换`px`
+                  }),
+                ]
+              }
+            },
+            {
+              loader: "less-loader",
+              options: {
+                modifyVars: {
+                  // 自定义的主题内容写在这里
+                }
+              }
+            }
+          ]
+        },
+        {
           test: /\.(png|jpg|gif|jpeg|bmp|webp)$/,
           use: [
             {
@@ -151,7 +199,10 @@ const config = {
       }
     },
     optimization: {
-        runtimeChunk: true,
+        //runtimeChunk: true,
+        runtimeChunk: {
+            name: 'runtime'
+        },
         splitChunks: {
             chunks: 'all',
             maxInitialRequests: Infinity,
@@ -165,12 +216,12 @@ const config = {
                     // 设置优先级，防止和自定义的公共代码提取时被覆盖，不进行打包
                     priority: 10
                 },
-                common: {
-                    // 抽离自己写的公共代码，common里面是一个公共类库
-                    chunks: 'all',
-                    name: 'common', // 任意命名
-                    minSize: 0 // 只要超出0字节就生成一个新包
-                }
+                // common: {
+                //     // 抽离自己写的公共代码，common里面是一个公共类库
+                //     chunks: 'all',
+                //     name: 'common', // 任意命名
+                //     minSize: 0 // 只要超出0字节就生成一个新包
+                // }
             }
         }
     },

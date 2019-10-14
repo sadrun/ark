@@ -1,6 +1,6 @@
 {
   "name": "webpack4-bable7-react",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "main": "./lib/index.js",
   "module": "./esm/index.js",
