@@ -1,6 +1,6 @@
 {
   "name": "@ark-plan/ark-templete",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "emplete",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
