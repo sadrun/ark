@@ -4,8 +4,7 @@ import { goto } from '@ark-plan/ark';
 
 const { Header, Footer } = Layout;
 
-export default function Framework(props) {
-  const { content, loading } = props;
+export default function Framework({ content, loading }) {
   return (
     <Layout className="layout">
       {!!loading &&  <div className="loading"><Spin /></div> }
