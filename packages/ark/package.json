@@ -13,6 +13,11 @@
     "build:esm": "rm -fr ./esm && tsc",
     "build:cjs": "rm -fr ./lib && tsc -p tsconfig.cjs.json"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sadrun/ark/tree/master/packages/ark"
+  },
+  "homepage": "https://github.com/sadrun/ark/blob/master/packages/ark",
   "browserslist": [
     "> 1%",
     "last 10 versions",
