@@ -2,6 +2,11 @@
 
 一个轻量版的微前端方案。
 
+## 本地示例
+1. git clone https://github.com/sadrun/ark.git
+2. cd packages/ark && npm start
+ 即可启动本地测试服务
+ 
 ## 📦 安装
 * yarn: yarn add @ark-plan/ark
 * npm: npm install @ark-plan/ark --save
