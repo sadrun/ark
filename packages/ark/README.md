@@ -5,7 +5,8 @@
 ## 本地示例
 1. git clone https://github.com/sadrun/ark.git
 2. cd ark/packages/ark && npm start
- 即可启动本地测试服务
+也可自行进入 packages/ark/example：
+1. yarn && yarn start
 
 ## 📦 安装
 * yarn: yarn add @ark-plan/ark

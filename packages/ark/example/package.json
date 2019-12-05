@@ -55,6 +55,7 @@
     "webpackbar": "^4.0.0"
   },
   "dependencies": {
+    "@ark-plan/ark": "^1.0.2",
     "antd": "^3.26.0",
     "babel-polyfill": "^6.26.0",
     "core-js": "^3.2.1",

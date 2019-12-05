@@ -1,6 +1,6 @@
 {
   "name": "@ark-plan/ark",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "",
   "main": "./lib/index.js",
   "module": "./esm/index.js",
@@ -9,7 +9,7 @@
     "lib"
   ],
   "scripts": {
-    "start": "cd example && npm run dev",
+    "start": "cd example && yarn install && npm run dev",
     "build": "npm run build:cjs && npm run build:esm",
     "build:esm": "rm -fr ./esm && tsc",
     "build:cjs": "rm -fr ./lib && tsc -p tsconfig.cjs.json"
