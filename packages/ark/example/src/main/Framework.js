@@ -1,6 +1,6 @@
 import React,{useState} from 'react';
 import { Layout, Menu, Spin } from 'antd';
-import {goto} from '../../../src/index';
+import { goto } from '@ark-plan/ark';
 
 const { Header, Footer } = Layout;
 

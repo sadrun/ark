@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Framework from './Framework';
 import './index.less';
-import {registerMicroApps} from '../../../src/index';
+import { registerMicroApps } from '@ark-plan/ark';
 
 function render({ template, loading, name}) {
   const container = document.getElementById('frameWork');
