@@ -1,0 +1,22 @@
+{
+    "defaultSeverity": "error",
+    "extends": [
+        "tslint:recommended",
+        "tslint-eslint-rules",
+        "tslint-config-prettier",
+        "tslint-plugin-prettier"
+    ],
+    "jsRules": {},
+    "rules": {
+        "prettier": ["true", ".prettierrc"],
+        "no-console": false, // 关闭console告警
+        "indent": [true, "spaces", 4], //ts的命名空间
+        "no-consecutive-blank-lines": false, //不允许有空白行
+        "object-literal-sort-keys": false, //检查对象文字中键的排序
+        "ordered-imports": false, //#import 按字母排序
+        "semicolon": false, // 强制分号
+        "no-unused-expression":false,
+        "prefer-for-of":false
+    },
+    "rulesDirectory": []
+}
