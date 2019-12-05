@@ -9,6 +9,7 @@
     "lib"
   ],
   "scripts": {
+    "start": "cd example && npm run dev",
     "build": "npm run build:cjs && npm run build:esm",
     "build:esm": "rm -fr ./esm && tsc",
     "build:cjs": "rm -fr ./lib && tsc -p tsconfig.cjs.json"
